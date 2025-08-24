@@ -180,4 +180,24 @@ API inputs are validated and sanitized to prevent injection attacks such as SQL 
 ### Why Security Matters
 
 Security is crucial for maintaining user trust and protecting sensitive information such as personal details and payment data. Without proper security controls, users and their information are at risk of exposure or manipulation. Additionally, a secure API helps the sy
+## CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) are essential practices in modern software development that streamline and automate the delivery process.
+
+### 🚀 What is CI/CD?
+CI/CD pipelines help automatically build, test, and deploy code whenever changes are made to the project. This ensures that new code is integrated regularly, tested immediately, and deployed with minimal manual intervention. It improves code quality, reduces bugs, and speeds up the release process.
+
+### 🛠️ Tools Used
+
+- **GitHub Actions:** Used to define workflows that automate tasks such as running tests, checking code formatting, and deploying updates when code is pushed to the repository.
+- **Docker:** Containerizes the application to ensure consistent environments across development, testing, and production. It simplifies deployment and scaling.
+- **Heroku / AWS / Render (Optional):** These platforms can be used for hosting the final deployed version of the application, integrating easily with CI/CD workflows.
+
+### ✅ Benefits to the Project
+
+- **Automated Testing** ensures that every change is validated.
+- **Early Bug Detection** by integrating code frequently.
+- **Faster Deployment** reduces time-to-market for new features.
+- **Reliable Delivery** ensures that production stays stable with every release.
+
 
