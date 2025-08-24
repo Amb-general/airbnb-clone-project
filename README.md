@@ -156,4 +156,28 @@ Users can search for listings by location, price range, date availability, and o
 
 ### 📈 Admin Dashboard (optional/bonus)
 An admin interface (if implemented) allows for management of users, properties, and bookings. This feature is useful for monitoring the platform and moderating content.
+## API Security
+
+Securing the backend APIs is critical for protecting user data, transactions, and overall system integrity in the Airbnb clone project. Below are the key security measures that will be implemented:
+
+### 🔐 Authentication
+We use token-based authentication (e.g., JWT) to verify user identities before granting access to protected resources. Only registered users with valid credentials can log in and interact with their data.
+
+### 🛡️ Authorization
+Role-based access control ensures users can only perform actions they are allowed to. For example, guests cannot create property listings, and only the property owner can modify or delete their listings.
+
+### 🚦 Rate Limiting
+To prevent abuse (e.g., brute-force attacks or spamming endpoints), we implement rate limiting on API requests. This protects both the server and other users by ensuring fair usage of resources.
+
+### 🔒 Data Encryption
+All communication between the client and server is secured via HTTPS to prevent data interception. Sensitive information such as passwords is stored using hashing algorithms like bcrypt.
+
+### 🧾 Input Validation & Sanitization
+API inputs are validated and sanitized to prevent injection attacks such as SQL injection or cross-site scripting (XSS). This reduces the risk of attackers exploiting the system through malformed requests.
+
+---
+
+### Why Security Matters
+
+Security is crucial for maintaining user trust and protecting sensitive information such as personal details and payment data. Without proper security controls, users and their information are at risk of exposure or manipulation. Additionally, a secure API helps the sy
 
