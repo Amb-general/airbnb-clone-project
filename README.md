@@ -53,4 +53,83 @@ Below are the core technologies used in the Airbnb clone project, along with the
 ### ☁️ Hosting & Deployment
 - **Render / Heroku**: Cloud platforms used to host the Django application and database, making the app accessible online.
 - **GitHub**: Used for version control and collaboration on the codebase.
+## Database Design
+
+This section outlines the core entities in the Airbnb clone project and how they relate to one another.
+
+### 🧑 Users
+Represents individuals who use the platform — either as guests or hosts.
+
+**Key Fields:**
+- `id`: Unique identifier for the user (Primary Key).
+- `name`: Full name of the user.
+- `email`: User's email address (must be unique).
+- `password`: Hashed password for login authentication.
+- `is_host`: Boolean indicating whether the user is a host.
+
+**Relationships:**
+- A user can list **multiple properties** (if `is_host` is `True`).
+- A user can make **multiple bookings**.
+- A user can leave **reviews**.
+
+---
+
+### 🏠 Properties
+Represents the accommodations listed by hosts.
+
+**Key Fields:**
+- `id`: Unique identifier for the property.
+- `owner_id`: Foreign key referencing the `Users` table.
+- `title`: Title or name of the property.
+- `location`: Address or city where the property is located.
+- `price_per_night`: Cost to book per night.
+
+**Relationships:**
+- A property is owned by one **user** (host).
+- A property can have multiple **bookings** and **reviews**.
+
+---
+
+### 📅 Bookings
+Tracks when users reserve properties.
+
+**Key Fields:**
+- `id`: Unique identifier for the booking.
+- `user_id`: Foreign key referencing the booking guest.
+- `property_id`: Foreign key referencing the property booked.
+- `check_in`: Start date of the booking.
+- `check_out`: End date of the booking.
+
+**Relationships:**
+- Each booking is made by one **user** for one **property**.
+
+---
+
+### 💬 Reviews
+Captures feedback left by guests after a stay.
+
+**Key Fields:**
+- `id`: Unique identifier for the review.
+- `user_id`: Foreign key referencing the reviewer.
+- `property_id`: Foreign key referencing the property reviewed.
+- `rating`: Numeric score (e.g., 1–5).
+- `comment`: Text feedback.
+
+**Relationships:**
+- A review is left by a **user** on a **property**.
+
+---
+
+### 💳 Payments
+Stores payment transaction information for bookings.
+
+**Key Fields:**
+- `id`: Unique identifier for the payment.
+- `booking_id`: Foreign key referencing the related booking.
+- `amount`: Total amount paid.
+- `payment_method`: Method used (e.g., card, PayPal).
+- `status`: Status of the transaction (e.g., successful, failed).
+
+**Relationships:**
+- Each payment is tied to a single **booking**.
 
