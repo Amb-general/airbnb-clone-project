@@ -30,4 +30,27 @@ This project involves the following key roles and responsibilities:
 
 - **Frontend Developer:** Builds the user interface with HTML, CSS, and JavaScript. Focuses on creating a responsive, intuitive, and visually appealing user experience that interacts with the backend API.
 
-- **DevOps Engineer:** Manages deployment, continuous integration/continuous deployment (CI/CD) pipelines, and server infrastructure to ensure the application is reliably hosted and available.
+- **DevOps Engineer:** Manages deployment, continuous integration/continuous deployment (CI/CD) pipelines, and server infrastructure to ensure the application is reliably hosted and available.## Technology Stack
+
+Below are the core technologies used in the Airbnb clone project, along with their purposes:
+
+### 🧠 Backend Technologies
+- **Python**: The primary programming language used for developing the application’s backend logic.
+- **Django**: A high-level Python web framework that enables rapid development of secure and maintainable web applications. It handles URL routing, templating, ORM, and more.
+- **Django ORM**: Django’s built-in Object-Relational Mapper used to interact with the database using Python code.
+
+### 💾 Database
+- **MySQL**: A relational database used to store user data, listings, reservations, and other persistent information.
+
+### 🎨 Frontend Technologies
+- **HTML/CSS**: Used to create and style the structure of the web application's user interface.
+- **JavaScript**: Adds interactivity and dynamic features to the frontend.
+- **Bootstrap**: A responsive CSS framework used for quick UI development with built-in components.
+
+### 🌐 API Platform
+- **Django REST Framework (DRF)**: Used to build RESTful APIs that enable communication between the frontend and backend.
+
+### ☁️ Hosting & Deployment
+- **Render / Heroku**: Cloud platforms used to host the Django application and database, making the app accessible online.
+- **GitHub**: Used for version control and collaboration on the codebase.
+
