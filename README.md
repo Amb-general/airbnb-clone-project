@@ -10,7 +10,7 @@ This project is a clone of the AirBnB web application. It is part of the Holbert
 - To build a dynamic front-end using a modern framework.
 
 ## Tech Stack
-- **Back-end:** Python, Flask, MySQL
+- **Back-end:** Python, Django, MySQL
 - **API:** RESTful API
 - **Front-end:** HTML, CSS, JavaScript ( potentially a framework like React )
 - **Deployment:** (e.g., using a platform like Heroku or AWS)
